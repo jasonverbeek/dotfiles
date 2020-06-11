@@ -1,0 +1,9 @@
+#!/bin/bash
+MYDIR=$(dirname `realpath $0`)
+
+echo Cleaning up existing dotfiles...
+rm ~/.vimrc ~/.bashrc &> /dev/null
+
+echo Symlinking dotfiles...
+ln -s "${MYDIR}/vimrc" "$HOME/.vimrc"
+ln -s "${MYDIR}/bashrc" "$HOME/.bashrc"
