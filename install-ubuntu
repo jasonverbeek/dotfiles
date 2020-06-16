@@ -1,0 +1,13 @@
+#!/bin/bash
+MYDIR=$(dirname `realpath $0`)
+
+echo Cleaning up existing dotfiles...
+#rm $HOME/.vimrc $HOME/.bashrc $HOME/.ssh/config & > /dev/null
+# rm $HOME/.vimrc $HOME/.bashrc &> /dev/null
+rm $HOME/.vimrc &> /dev/null
+
+echo Symlinking dotfiles...
+ln -s "${MYDIR}/vimrc" "$HOME/.vimrc"
+#ln -s "${MYDIR}/bashrc" "$HOME/.bashrc"
+#mkdir -p "${HOME}/.ssh"
+#ln -s "${MYDIR}/sshconfig" "$HOME/.ssh/config"
