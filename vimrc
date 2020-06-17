@@ -49,9 +49,9 @@ else
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
 
-"Always show current position
-"set ruler
-set colorcolumn=79
+" Show python max char length
+" set colorcolumn=80
+au BufNewFile,BufRead *.py setlocal colorcolumn=80
 
 " Height of the command bar
 set cmdheight=1
