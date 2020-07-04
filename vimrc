@@ -20,7 +20,8 @@ let mapleader = "`"
 
 " Fast saving
 nmap <leader>w :w!<cr>
-
+" Paste Mode Toggle
+nmap <leader>p :set paste!<cr>
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
